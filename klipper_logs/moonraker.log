@@ -1,0 +1,1089 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/pi/klipper_config/moonraker.conf
+log_file: /home/pi/klipper_logs/moonraker.log
+software_version: v0.7.1-194-geda5623
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+config_path = ~/klipper_config
+temperature_store_size = 600
+gcode_store_size = 1000
+
+[authorization]
+cors_domains = 
+	*.local
+	*.lan
+	*://app.fluidd.xyz
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[history]
+
+[octoprint_compat]
+
+[update_manager]
+
+[update_manager client fluidd]
+type = web
+repo = cadriel/fluidd
+path = ~/fluidd
+
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = ~/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
+
+#################################################################
+
+System Info:
+
+***cpu_info***
+  cpu_count: 4
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 3 (v7l)
+  serial_number: 10000000eb3c18f1
+  hardware_desc: BCM2711
+  model: Raspberry Pi 4 Model B Rev 1.4
+  total_memory: 1858696
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SS08G
+  product_revision: 8.0
+  serial_number: 70cc4b0b
+  manufacturer_date: 3/2017
+  capacity: 7.4 GiB
+  total_bytes: 7948206080
+
+***distribution***
+  name: Raspbian GNU/Linux 10 (buster)
+  id: raspbian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: debian
+  codename: buster
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***available_services***
+ ['klipper', 'klipper_mcu', 'KlipperScreen', 'moonraker', 'webcamd']
+
+***service_state***
+  klipper: {'active_state': 'active', 'sub_state': 'running'}
+  klipper_mcu: {'active_state': 'active', 'sub_state': 'running'}
+  KlipperScreen: {'active_state': 'active', 'sub_state': 'running'}
+  moonraker: {'active_state': 'active', 'sub_state': 'running'}
+  webcamd: {'active_state': 'active', 'sub_state': 'running'}
+
+***network***
+  eth0: {'mac_address': 'e4:5f:01:20:a5:16', 'ip_addresses': [{'family': 'ipv4', 'address': '192.168.2.97', 'is_link_local': False}, {'family': 'ipv6', 'address': 'fe80::d5f9:881d:a46:1a30', 'is_link_local': True}]}
+2021-12-02 10:46:52,469 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.2.234
+2021-12-02 10:46:52,935 [app.py:log_request()] - 101 GET /websocket?token=GETPU4P6DFSJHNNC2XBS7EOXCL7SNWOX (192.168.2.234) [_TRUSTED_USER_] 5.47ms
+2021-12-02 10:46:52,935 [websockets.py:add_websocket()] - New Websocket Added: 2804746512
+2021-12-02 10:46:58,771 [websockets.py:remove_websocket()] - Websocket Removed: 2804746512
+2021-12-02 10:47:01,597 [app.py:log_request()] - 101 GET /websocket?token=IEG4HRMGKXR2HOXOCU4UNP4KRKNKJ3JG (192.168.2.234) [_TRUSTED_USER_] 1.83ms
+2021-12-02 10:47:01,597 [websockets.py:add_websocket()] - New Websocket Added: 2804800304
+2021-12-02 10:47:30,236 [websockets.py:remove_websocket()] - Websocket Removed: 2804800304
+2021-12-02 10:47:32,642 [app.py:log_request()] - 101 GET /websocket?token=7SRYHFDDPLELHUQFE2QKXTYRFIB5AVOS (192.168.2.234) [_TRUSTED_USER_] 2.58ms
+2021-12-02 10:47:32,642 [websockets.py:add_websocket()] - New Websocket Added: 2804527344
+2021-12-02 10:47:39,828 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen pull --progress) successfully finished
+2021-12-02 10:47:39,849 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen status -u no) successfully finished
+2021-12-02 10:47:39,863 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen config --get branch.master.remote) successfully finished
+2021-12-02 10:47:39,877 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen remote get-url origin) successfully finished
+2021-12-02 10:47:39,891 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen branch --list) successfully finished
+2021-12-02 10:47:39,905 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen rev-parse HEAD) successfully finished
+2021-12-02 10:47:39,919 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen rev-parse origin/master) successfully finished
+2021-12-02 10:47:39,948 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen describe --always --tags --long --dirty) successfully finished
+2021-12-02 10:47:39,972 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/KlipperScreen describe origin/master --always --tags --long) successfully finished
+2021-12-02 10:47:39,973 [git_deploy.py:log_repo_info()] - Git Repo KlipperScreen Detected:
+Owner: jordanruthe
+Repository Name: KlipperScreen
+Path: /home/pi/KlipperScreen
+Remote: origin
+Branch: master
+Remote URL: https://github.com/jordanruthe/KlipperScreen.git
+Current Commit SHA: 41d41dc2ebbddddd0b8dfe37ea0e1eacd0f57b1f
+Upstream Commit SHA: 41d41dc2ebbddddd0b8dfe37ea0e1eacd0f57b1f
+Current Version: v0.1.6-144
+Upstream Version: v0.1.6-144
+Is Dirty: False
+Is Detached: False
+Commits Behind: 0
+2021-12-02 10:47:39,973 [base_deploy.py:log_info()] - Application KlipperScreen: Channel: dev, Need Channel Update: False
+2021-12-02 10:47:39,973 [base_deploy.py:log_info()] - Application KlipperScreen: Validity check for git repo passed
+2021-12-02 10:47:41,071 [shell_command.py:_check_proc_success()] - Command (sudo systemctl restart KlipperScreen) successfully finished
+2021-12-02 10:49:16,813 [shell_command.py:_check_proc_success()] - Command (sudo DEBIAN_FRONTEND=noninteractive apt-get update --allow-releaseinfo-change) successfully finished
+2021-12-02 10:49:22,651 [file_manager.py:complete_file_write()] - Invalid file write event: KlipperScreen.conf
+2021-12-02 10:49:37,819 [app.py:log_request()] - 101 GET /websocket?token=VR5WULEI7DJA7PTJMU2KBVGIT7VJNZ4I (192.168.2.234) [_TRUSTED_USER_] 3.79ms
+2021-12-02 10:49:37,820 [websockets.py:add_websocket()] - New Websocket Added: 2804748176
+2021-12-02 10:49:41,167 [websockets.py:remove_websocket()] - Websocket Removed: 2804748176
+2021-12-02 11:07:18,782 [machine.py:update_service_status()] - Error processing service state update
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/machine.py", line 401, in update_service_status
+    resp = await scmd.run_with_response(log_complete=False)
+  File "/home/pi/moonraker/moonraker/components/shell_command.py", line 243, in run_with_response
+    self.return_code, stdout, stderr)
+components.shell_command.ShellCommandError: Error running shell command: '['systemctl', 'show', '-p', 'ActiveState,SubState', '--value', 'klipper', 'klipper_mcu', 'KlipperScreen', 'moonraker', 'webcamd']'
+2021-12-02 11:10:04,554 [shell_command.py:_check_proc_success()] - Command (sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade --yes) successfully finished
+2021-12-02 11:11:40,385 [app.py:log_request()] - 404 GET / (192.168.2.1) [No User] 14.71ms
+2021-12-02 11:13:13,596 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper pull --progress) successfully finished
+2021-12-02 11:13:19,801 [shell_command.py:_check_proc_success()] - Command (/home/pi/klippy-env/bin/pip install -U pip) successfully finished
+2021-12-02 11:14:03,894 [shell_command.py:_check_proc_success()] - Command (/home/pi/klippy-env/bin/pip install -r /home/pi/klipper/scripts/klippy-requirements.txt) successfully finished
+2021-12-02 11:14:04,685 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper status -u no) successfully finished
+2021-12-02 11:14:04,700 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper config --get branch.master.remote) successfully finished
+2021-12-02 11:14:04,714 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper remote get-url origin) successfully finished
+2021-12-02 11:14:04,728 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper branch --list) successfully finished
+2021-12-02 11:14:04,742 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse HEAD) successfully finished
+2021-12-02 11:14:04,756 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse origin/master) successfully finished
+2021-12-02 11:14:04,859 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe --always --tags --long --dirty) successfully finished
+2021-12-02 11:14:04,953 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe origin/master --always --tags --long) successfully finished
+2021-12-02 11:14:04,953 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/pi/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper.git
+Current Commit SHA: 8b2da0d353575b2c2d62b6d84487fc5d0d9f0d65
+Upstream Commit SHA: 8b2da0d353575b2c2d62b6d84487fc5d0d9f0d65
+Current Version: v0.10.0-171
+Upstream Version: v0.10.0-171
+Is Dirty: False
+Is Detached: False
+Commits Behind: 0
+2021-12-02 11:14:04,953 [base_deploy.py:log_info()] - Application klipper: Channel: dev, Need Channel Update: False
+2021-12-02 11:14:04,954 [base_deploy.py:log_info()] - Application klipper: Validity check for git repo passed
+2021-12-02 11:14:04,993 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:14:05,023 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:05,029 [shell_command.py:_check_proc_success()] - Command (sudo systemctl restart klipper) successfully finished
+2021-12-02 11:14:06,522 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:08,046 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:08,135 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:09,642 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:09,699 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:11,200 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:11,243 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:12,747 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:12,834 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:14,334 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:14,385 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:15,104 [shell_command.py:_check_proc_success()] - Command (sudo systemctl restart klipper) successfully finished
+2021-12-02 11:14:15,571 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:14:15,847 [moonraker.py:_check_ready()] - 
+Unknown temperature sensor 'rpi_temperature'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:14:15,857 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/adxl345/dump_adxl345
+2021-12-02 11:14:15,858 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.adxl345.dump_adxl345
+2021-12-02 11:14:15,861 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:14:15,864 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:14:51,616 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:14:51,662 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:52,873 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:14:52,890 [moonraker.py:_check_ready()] - 
+Unknown temperature sensor 'rpi_temperature'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:14:52,896 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:14:52,899 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:14:55,328 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:14:55,370 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:14:56,585 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:14:56,599 [moonraker.py:_check_ready()] - 
+Unknown temperature sensor 'rpi_temperature'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:14:56,602 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:14:56,604 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:16:08,866 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:16:08,888 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:10,977 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:11,064 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:12,969 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:13,027 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:14,971 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:14,989 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:16,968 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:17,060 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:18,973 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:18,984 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:20,970 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:21,043 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:22,973 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:22,990 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:24,969 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:24,980 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:26,977 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:26,987 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:28,975 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:28,992 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:30,978 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:31,014 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:32,977 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:33,034 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:34,960 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:34,991 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:36,499 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:36,578 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:36,837 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:16:36,923 [moonraker.py:_check_ready()] - 
+Unknown temperature sensor 'rpi_temperature'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:16:36,934 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:16:36,936 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:16:39,470 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:16:39,525 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:16:40,727 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:16:40,741 [moonraker.py:_check_ready()] - 
+Unknown temperature sensor 'rpi_temperature'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:16:40,745 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:16:40,746 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:16:51,342 [file_manager.py:complete_file_write()] - Invalid file write event: printer.cfg
+2021-12-02 11:18:12,823 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:18:12,884 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:18:14,086 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:18:14,110 [moonraker.py:_check_ready()] - 
+Option 'default_parameter_f' is not valid in section 'gcode_macro m204'
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-12-02 11:18:14,113 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_stepper
+2021-12-02 11:18:14,114 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_stepper
+2021-12-02 11:18:14,117 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:18:14,119 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:18:33,294 [file_manager.py:complete_file_write()] - Invalid file write event: printer.cfg
+2021-12-02 11:18:36,703 [file_manager.py:complete_file_write()] - Invalid file write event: macros.cfg
+2021-12-02 11:19:01,368 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:19:01,432 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:19:02,625 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:19:02,645 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:19:02,647 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:19:03,917 [moonraker.py:_check_ready()] - 
+mcu 'rpi': Command format mismatch: config is_config=%c crc=%u is_shutdown=%c move_count=%hu vs config is_config=%c crc=%u move_count=%hu is_shutdown=%c
+
+This type of error is frequently caused by running an older
+version of the firmware on the micro-controller (fix by
+recompiling and flashing the firmware).
+
+Known versions: host=v0.10.0-171-g8b2da0d3, mcu=v0.10.0-171-g8b2da0d3, rpi=v0.9.1-616-g28f60f7e
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Protocol error connecting to printer
+
+2021-12-02 11:19:13,585 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:19:13,621 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:19:13,686 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:19:14,842 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:19:14,860 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:19:14,862 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:19:16,134 [moonraker.py:_check_ready()] - 
+mcu 'rpi': Command format mismatch: config is_config=%c crc=%u is_shutdown=%c move_count=%hu vs config is_config=%c crc=%u move_count=%hu is_shutdown=%c
+
+This type of error is frequently caused by running an older
+version of the firmware on the micro-controller (fix by
+recompiling and flashing the firmware).
+
+Known versions: host=v0.10.0-171-g8b2da0d3, mcu=v0.10.0-171-g8b2da0d3, rpi=v0.9.1-616-g28f60f7e
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Protocol error connecting to printer
+
+2021-12-02 11:20:14,083 [moonraker.py:on_connection_closed()] - Klippy Connection Removed
+2021-12-02 11:20:14,110 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:16,165 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:16,255 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:18,156 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:18,266 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:20,152 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:20,183 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:22,133 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:22,166 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Host not connected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 317, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 546, in make_request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 602, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/moonraker.py", line 784, in wait
+    raise self.response
+utils.ServerError: Klippy Host not connected
+2021-12-02 11:20:22,393 [moonraker.py:connect()] - Klippy Connection Established
+2021-12-02 11:20:22,581 [moonraker.py:_init_klippy_connection()] - Webhooks Subscribed
+2021-12-02 11:20:22,584 [moonraker.py:_init_klippy_connection()] - GCode Output Subscribed
+2021-12-02 11:20:24,346 [moonraker.py:_check_ready()] - Klippy ready
+2021-12-02 11:20:24,840 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Pi', 'temperature_sensor enclosure', 'heater_bed', 'extruder']
+2021-12-02 11:20:24,846 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/motion_report/dump_trapq
+2021-12-02 11:20:24,848 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.motion_report.dump_trapq

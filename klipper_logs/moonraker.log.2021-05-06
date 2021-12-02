@@ -1,0 +1,2207 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/pi/klipper_config/moonraker.conf
+log_file: /home/pi/klipper_logs/moonraker.log
+software_version: v0.7.1-2-gdf43aca
+2021-05-07 16:01:24,421 [utils.py:setup_logging()] - config_file: /home/pi/klipper_config/moonraker.conf
+2021-05-07 16:01:24,422 [utils.py:setup_logging()] - log_file: /home/pi/klipper_logs/moonraker.log
+2021-05-07 16:01:24,422 [utils.py:setup_logging()] - software_version: v0.7.1-2-gdf43aca
+2021-05-07 16:01:24,443 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+config_path = ~/klipper_config
+temperature_store_size = 600
+gcode_store_size = 1000
+log_path = ~/klipper_logs
+
+[authorization]
+force_logins = True
+cors_domains = 
+	*.local
+	*.lan
+	*://app.fluidd.xyz
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+enable_auto_refresh = True
+
+[update_manager client fluidd]
+type = web
+repo = cadriel/fluidd
+path = ~/fluidd
+
+#################################################################
+2021-05-07 16:01:24,460 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2021-05-07 16:01:24,461 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2021-05-07 16:01:24,461 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2021-05-07 16:01:24,461 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2021-05-07 16:01:24,461 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2021-05-07 16:01:24,461 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2021-05-07 16:01:24,599 [database.py:__init__()] - Unsafe Shutdown Count: 0
+2021-05-07 16:01:24,665 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2021-05-07 16:01:24,666 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2021-05-07 16:01:24,666 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2021-05-07 16:01:24,666 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2021-05-07 16:01:24,666 [moonraker.py:load_component()] - Component (database) loaded
+2021-05-07 16:01:25,038 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2021-05-07 16:01:25,039 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2021-05-07 16:01:25,039 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2021-05-07 16:01:25,039 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2021-05-07 16:01:25,039 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2021-05-07 16:01:25,040 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2021-05-07 16:01:25,040 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2021-05-07 16:01:25,040 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2021-05-07 16:01:25,040 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2021-05-07 16:01:25,041 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2021-05-07 16:01:25,041 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2021-05-07 16:01:25,044 [moonraker.py:load_component()] - Component (file_manager) loaded
+2021-05-07 16:01:25,050 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2021-05-07 16:01:25,051 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2021-05-07 16:01:25,051 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2021-05-07 16:01:25,051 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2021-05-07 16:01:25,051 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2021-05-07 16:01:25,052 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2021-05-07 16:01:25,052 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2021-05-07 16:01:25,052 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2021-05-07 16:01:25,052 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2021-05-07 16:01:25,052 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2021-05-07 16:01:25,052 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2021-05-07 16:01:25,056 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2021-05-07 16:01:25,056 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2021-05-07 16:01:25,698 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***cpu_info***
+  cpu_count: 4
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 3 (v7l)
+  hardware_desc: BCM2711
+  model: Raspberry Pi 4 Model B Rev 1.4
+  total_memory: 1858696
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SS08G
+  product_revision: 8.0
+  serial_number: 70cc4b0b
+  manufacturer_date: 3/2017
+  capacity: 7.4 GiB
+  total_bytes: 7948206080
+
+***distribution***
+  name: Raspbian GNU/Linux 10 (buster)
+  id: raspbian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: debian
+  codename: buster
+2021-05-07 16:01:25,698 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2021-05-07 16:01:25,699 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2021-05-07 16:01:25,699 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2021-05-07 16:01:25,699 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2021-05-07 16:01:25,700 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2021-05-07 16:01:25,700 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2021-05-07 16:01:25,700 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2021-05-07 16:01:25,700 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2021-05-07 16:01:25,700 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2021-05-07 16:01:25,701 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2021-05-07 16:01:25,701 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2021-05-07 16:01:25,702 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2021-05-07 16:01:25,702 [moonraker.py:load_component()] - Component (machine) loaded
+2021-05-07 16:01:25,709 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2021-05-07 16:01:25,710 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2021-05-07 16:01:25,710 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2021-05-07 16:01:25,710 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2021-05-07 16:01:25,710 [moonraker.py:load_component()] - Component (data_store) loaded
+2021-05-07 16:01:25,718 [moonraker.py:load_component()] - Component (shell_command) loaded
+2021-05-07 16:01:25,724 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2021-05-07 16:01:25,725 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2021-05-07 16:01:25,726 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2021-05-07 16:01:25,726 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2021-05-07 16:01:25,792 [update_manager.py:__init__()] - 
+Initializing Client Updater: 'fluidd',
+path: /home/pi/fluidd
+2021-05-07 16:01:25,792 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/moonraker
+2021-05-07 16:01:25,793 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.moonraker
+2021-05-07 16:01:25,793 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/klipper
+2021-05-07 16:01:25,794 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.klipper
+2021-05-07 16:01:25,794 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/system
+2021-05-07 16:01:25,794 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.system
+2021-05-07 16:01:25,794 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/client
+2021-05-07 16:01:25,795 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.client
+2021-05-07 16:01:25,795 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/full
+2021-05-07 16:01:25,795 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.full
+2021-05-07 16:01:25,795 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/update/status
+2021-05-07 16:01:25,796 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.status
+2021-05-07 16:01:25,796 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/recover
+2021-05-07 16:01:25,796 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.recover
+2021-05-07 16:01:25,797 [moonraker.py:load_component()] - Component (update_manager) loaded
+2021-05-07 16:01:25,804 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2021-05-07 16:01:25,804 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2021-05-07 16:01:25,805 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2021-05-07 16:01:25,805 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2021-05-07 16:01:25,805 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2021-05-07 16:01:25,806 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2021-05-07 16:01:25,806 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2021-05-07 16:01:25,806 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2021-05-07 16:01:25,807 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2021-05-07 16:01:25,807 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2021-05-07 16:01:25,816 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2021-05-07 16:01:25,817 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2021-05-07 16:01:25,817 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2021-05-07 16:01:25,817 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2021-05-07 16:01:25,817 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2021-05-07 16:01:25,818 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2021-05-07 16:01:25,892 [moonraker.py:load_component()] - Component (history) loaded
+2021-05-07 16:01:26,101 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.local
+.*\.lan
+.*://app\.fluidd\.xyz
+2021-05-07 16:01:26,102 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2021-05-07 16:01:26,103 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2021-05-07 16:01:26,104 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2021-05-07 16:01:26,105 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2021-05-07 16:01:26,106 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2021-05-07 16:01:26,108 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2021-05-07 16:01:26,109 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2021-05-07 16:01:26,110 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2021-05-07 16:01:26,111 [moonraker.py:load_component()] - Component (authorization) loaded
+2021-05-07 16:01:26,111 [moonraker.py:start()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: fluiddpi
+2021-05-07 16:01:26,117 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2021-05-07 16:01:26,155 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:01:26,170 [shell_command.py:_check_proc_success()] - Command (systemctl list-units --type=service) successfully finished
+2021-05-07 16:01:27,160 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:01:28,163 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:01:29,165 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:01:30,168 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:01:37,698 [moonraker.py:connect()] - Klippy Connection Established
+2021-05-07 16:01:37,702 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:37,707 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/info
+2021-05-07 16:01:37,707 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.info
+2021-05-07 16:01:37,707 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/emergency_stop
+2021-05-07 16:01:37,707 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.emergency_stop
+2021-05-07 16:01:37,708 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/query
+2021-05-07 16:01:37,708 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.query
+2021-05-07 16:01:37,708 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/list
+2021-05-07 16:01:37,708 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.list
+2021-05-07 16:01:37,708 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/firmware_restart
+2021-05-07 16:01:37,709 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.firmware_restart
+2021-05-07 16:01:37,709 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/objects/subscribe
+2021-05-07 16:01:37,709 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.objects.subscribe
+2021-05-07 16:01:37,709 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/script
+2021-05-07 16:01:37,710 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.script
+2021-05-07 16:01:37,710 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/help
+2021-05-07 16:01:37,710 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.help
+2021-05-07 16:01:37,710 [app.py:register_remote_handler()] - Registering HTTP endpoint: (GET POST) /printer/gcode/restart
+2021-05-07 16:01:37,710 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.gcode.restart
+2021-05-07 16:01:37,713 [moonraker.py:_initialize()] - Webhooks Subscribed
+2021-05-07 16:01:37,715 [moonraker.py:_initialize()] - GCode Output Subscribed
+2021-05-07 16:01:39,762 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:41,818 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:43,874 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:45,931 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:47,989 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:50,043 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:52,099 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:54,155 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:56,212 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:01:58,271 [moonraker.py:_check_ready()] - 
+Unable to open config file /home/pi/klipper_config/printer.cfg
+
+Once the underlying issue is corrected, use the "RESTART"
+command to reload the config and restart the host software.
+Printer is halted
+
+2021-05-07 16:02:00,175 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:01,178 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:02,183 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:03,188 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:04,194 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:02:34,200 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:35,204 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:36,211 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:37,216 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:02:38,220 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:03:08,226 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:09,230 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:10,234 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:11,239 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:12,246 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:03:42,251 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:43,256 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:44,261 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:45,266 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:03:46,273 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:04:16,279 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:17,284 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:18,289 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:19,294 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:20,298 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:04:50,304 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:51,309 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:52,314 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:53,317 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:04:54,322 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:05:24,328 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:05:25,332 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:05:26,338 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:05:27,343 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:05:28,347 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:05:58,352 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:05:59,357 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:00,362 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:01,367 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:02,372 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:06:32,378 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:33,382 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:34,387 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:35,391 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:06:36,397 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:07:06,402 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:07,406 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:08,410 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:09,415 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:10,421 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:07:40,427 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:41,431 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:42,435 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:43,439 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:07:44,443 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:08:14,448 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:15,453 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:16,459 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:17,463 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:18,467 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:08:48,472 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:49,476 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:50,480 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:51,484 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:08:52,488 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:09:22,495 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:23,500 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:24,504 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:25,508 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:26,514 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:09:56,521 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:57,525 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:58,529 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:09:59,533 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:10:00,537 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:10:30,542 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:10:31,548 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:10:32,552 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:10:33,557 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:10:34,561 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:11:04,569 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:05,573 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:06,579 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:07,584 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:08,589 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:11:38,597 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:39,602 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:40,606 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:41,610 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:11:42,614 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+2021-05-07 16:12:12,620 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:12:13,624 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:12:14,629 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:12:15,633 [update_manager.py:github_api_request()] - Error Processing GitHub API request: https://api.github.com/rate_limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 592, in github_api_request
+    resp = await asyncio.wait_for(fut, 10.)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 344, in run
+    source_ip=source_ip,
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 265, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 399, in resolve
+    None, _resolve_addr, host, port, family
+  File "/usr/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/pi/moonraker-env/lib/python3.7/site-packages/tornado/netutil.py", line 382, in _resolve_addr
+    addrinfo = socket.getaddrinfo(host, port, family, socket.SOCK_STREAM)
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-05-07 16:12:16,640 [update_manager.py:init_api_rate_limit()] - Error Initializing GitHub API Rate Limit
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 514, in init_api_rate_limit
+    resp = await self.github_api_request(url, is_init=True)
+  File "/home/pi/moonraker/moonraker/components/update_manager/update_manager.py", line 637, in github_api_request
+    f"Retries exceeded for GitHub API request: {url}")
+utils.ServerError: Retries exceeded for GitHub API request: https://api.github.com/rate_limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           --------------------Moonraker Log Start--------------------
+config_file: /home/pi/klipper_config/moonraker.conf
+log_file: /home/pi/klipper_logs/moonraker.log
+software_version: v0.7.1-2-gdf43aca
+2021-05-07 16:00:38,170 [utils.py:setup_logging()] - config_file: /home/pi/klipper_config/moonraker.conf
+2021-05-07 16:00:38,171 [utils.py:setup_logging()] - log_file: /home/pi/klipper_logs/moonraker.log
+2021-05-07 16:00:38,171 [utils.py:setup_logging()] - software_version: v0.7.1-2-gdf43aca
+2021-05-07 16:00:38,187 [moonraker.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+config_path = ~/klipper_config
+temperature_store_size = 600
+gcode_store_size = 1000
+log_path = ~/klipper_logs
+
+[authorization]
+force_logins = True
+cors_domains = 
+	*.local
+	*.lan
+	*://app.fluidd.xyz
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+enable_auto_refresh = True
+
+[update_manager client fluidd]
+type = web
+repo = cadriel/fluidd
+path = ~/fluidd
+
+#################################################################
+2021-05-07 16:00:38,197 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/info
+2021-05-07 16:00:38,198 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.info
+2021-05-07 16:00:38,198 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/config
+2021-05-07 16:00:38,198 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.config
+2021-05-07 16:00:38,198 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/restart
+2021-05-07 16:00:38,199 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.restart
+2021-05-07 16:00:38,229 [database.py:__init__()] - Unsafe Shutdown Count: 1
+2021-05-07 16:00:38,320 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/database/list
+2021-05-07 16:00:38,321 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.list
+2021-05-07 16:00:38,322 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/database/item
+2021-05-07 16:00:38,322 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.database.get_item, server.database.post_item, server.database.delete_item
+2021-05-07 16:00:38,323 [moonraker.py:load_component()] - Component (database) loaded
+2021-05-07 16:00:38,429 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/list
+2021-05-07 16:00:38,430 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.list
+2021-05-07 16:00:38,430 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/files/metadata
+2021-05-07 16:00:38,431 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.metadata
+2021-05-07 16:00:38,431 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /server/files/directory
+2021-05-07 16:00:38,431 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.get_directory, server.files.post_directory, server.files.delete_directory
+2021-05-07 16:00:38,431 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/move
+2021-05-07 16:00:38,432 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.move
+2021-05-07 16:00:38,432 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /server/files/copy
+2021-05-07 16:00:38,432 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.copy
+2021-05-07 16:00:38,432 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.files.delete_file
+2021-05-07 16:00:38,437 [moonraker.py:load_component()] - Component (file_manager) loaded
+2021-05-07 16:00:38,442 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/pause
+2021-05-07 16:00:38,443 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.pause
+2021-05-07 16:00:38,443 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/resume
+2021-05-07 16:00:38,443 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.resume
+2021-05-07 16:00:38,443 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/cancel
+2021-05-07 16:00:38,444 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.cancel
+2021-05-07 16:00:38,444 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/print/start
+2021-05-07 16:00:38,444 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.print.start
+2021-05-07 16:00:38,444 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/restart
+2021-05-07 16:00:38,444 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.restart
+2021-05-07 16:00:38,445 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /printer/firmware_restart
+2021-05-07 16:00:38,445 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: printer.firmware_restart
+2021-05-07 16:00:38,445 [moonraker.py:load_component()] - Component (klippy_apis) loaded
+2021-05-07 16:00:38,879 [moonraker.py:add_log_rollover_item()] - 
+System Info:
+
+***cpu_info***
+  cpu_count: 4
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 3 (v7l)
+  hardware_desc: BCM2711
+  model: Raspberry Pi 4 Model B Rev 1.4
+  total_memory: 1858696
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SS08G
+  product_revision: 8.0
+  serial_number: 70cc4b0b
+  manufacturer_date: 3/2017
+  capacity: 7.4 GiB
+  total_bytes: 7948206080
+
+***distribution***
+  name: Raspbian GNU/Linux 10 (buster)
+  id: raspbian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: debian
+  codename: buster
+2021-05-07 16:00:38,880 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/reboot
+2021-05-07 16:00:38,880 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.reboot
+2021-05-07 16:00:38,880 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/shutdown
+2021-05-07 16:00:38,881 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.shutdown
+2021-05-07 16:00:38,881 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/restart
+2021-05-07 16:00:38,881 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.restart
+2021-05-07 16:00:38,881 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/stop
+2021-05-07 16:00:38,882 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.stop
+2021-05-07 16:00:38,882 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/services/start
+2021-05-07 16:00:38,882 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.services.start
+2021-05-07 16:00:38,882 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/system_info
+2021-05-07 16:00:38,883 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.system_info
+2021-05-07 16:00:38,883 [moonraker.py:load_component()] - Component (machine) loaded
+2021-05-07 16:00:38,887 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/temperature_store
+2021-05-07 16:00:38,887 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.temperature_store
+2021-05-07 16:00:38,888 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/gcode_store
+2021-05-07 16:00:38,888 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.gcode_store
+2021-05-07 16:00:38,888 [moonraker.py:load_component()] - Component (data_store) loaded
+2021-05-07 16:00:38,892 [moonraker.py:load_component()] - Component (shell_command) loaded
+2021-05-07 16:00:38,895 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2021-05-07 16:00:38,896 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/proc_stats
+2021-05-07 16:00:38,896 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.proc_stats
+2021-05-07 16:00:38,896 [moonraker.py:load_component()] - Component (proc_stats) loaded
+2021-05-07 16:00:38,900 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/version
+2021-05-07 16:00:38,900 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/server
+2021-05-07 16:00:38,900 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/login
+2021-05-07 16:00:38,901 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/currentuser
+2021-05-07 16:00:38,901 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/settings
+2021-05-07 16:00:38,901 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/job
+2021-05-07 16:00:38,902 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printer
+2021-05-07 16:00:38,902 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /api/printer/command
+2021-05-07 16:00:38,902 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /api/printerprofiles
+2021-05-07 16:00:38,903 [moonraker.py:load_component()] - Component (octoprint_compat) loaded
+2021-05-07 16:00:38,946 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.local
+.*\.lan
+.*://app\.fluidd\.xyz
+2021-05-07 16:00:38,947 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/login
+2021-05-07 16:00:38,947 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/logout
+2021-05-07 16:00:38,947 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/refresh_jwt
+2021-05-07 16:00:38,948 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST DELETE) /access/user
+2021-05-07 16:00:38,948 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/users/list
+2021-05-07 16:00:38,948 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /access/user/password
+2021-05-07 16:00:38,949 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET POST) /access/api_key
+2021-05-07 16:00:38,949 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /access/oneshot_token
+2021-05-07 16:00:38,950 [moonraker.py:load_component()] - Component (authorization) loaded
+2021-05-07 16:00:38,953 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET DELETE) /server/history/job
+2021-05-07 16:00:38,953 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.get_job, server.history.delete_job
+2021-05-07 16:00:38,953 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/list
+2021-05-07 16:00:38,954 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.list
+2021-05-07 16:00:38,954 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /server/history/totals
+2021-05-07 16:00:38,954 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: server.history.totals
+2021-05-07 16:00:38,954 [moonraker.py:load_component()] - Component (history) loaded
+2021-05-07 16:00:38,986 [update_manager.py:__init__()] - 
+Initializing Client Updater: 'fluidd',
+path: /home/pi/fluidd
+2021-05-07 16:00:38,987 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/moonraker
+2021-05-07 16:00:38,988 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.moonraker
+2021-05-07 16:00:38,988 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/klipper
+2021-05-07 16:00:38,988 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.klipper
+2021-05-07 16:00:38,988 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/system
+2021-05-07 16:00:38,988 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.system
+2021-05-07 16:00:38,989 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/client
+2021-05-07 16:00:38,989 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.client
+2021-05-07 16:00:38,989 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/full
+2021-05-07 16:00:38,989 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.full
+2021-05-07 16:00:38,990 [app.py:register_local_handler()] - Registering HTTP Endpoint: (GET) /machine/update/status
+2021-05-07 16:00:38,990 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.status
+2021-05-07 16:00:38,990 [app.py:register_local_handler()] - Registering HTTP Endpoint: (POST) /machine/update/recover
+2021-05-07 16:00:38,990 [websockets.py:register_api_handler()] - Registering Websocket JSON-RPC methods: machine.update.recover
+2021-05-07 16:00:38,991 [moonraker.py:load_component()] - Component (update_manager) loaded
+2021-05-07 16:00:38,991 [moonraker.py:start()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: fluiddpi
+2021-05-07 16:00:38,992 [app.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2021-05-07 16:00:39,018 [shell_command.py:_check_proc_success()] - Command (systemctl list-units --type=service) successfully finished
+2021-05-07 16:00:39,313 [update_manager.py:github_api_request()] - GitHub API Request Processed
+URL: https://api.github.com/rate_limit
+Response Code: 200
+Response Reason: OK
+ETag: None
+2021-05-07 16:00:39,313 [update_manager.py:init_api_rate_limit()] - GitHub API Rate Limit Initialized
+Rate Limit: 60
+Rate Limit Remaining: 60
+Rate Limit Reset Time: Wed Dec  1 21:27:01 2021, Seconds Since Epoch: 1638394021
+2021-05-07 16:00:43,827 [shell_command.py:_check_proc_success()] - Command (apt list --upgradable) successfully finished
+2021-05-07 16:00:43,827 [update_manager.py:refresh()] - Detected 35 package updates:
+base-files
+cmake-data
+cmake
+firmware-atheros
+firmware-brcm80211
+firmware-libertas
+firmware-misc-nonfree
+firmware-realtek
+isc-dhcp-client
+isc-dhcp-common
+klibc-utils
+libgcrypt20
+libgnutls30
+libhogweed4
+libklibc
+liblz4-1
+libnettle6
+libraspberrypi-bin
+libraspberrypi-dev
+libraspberrypi-doc
+libraspberrypi0
+libx11-6
+libx11-data
+libxml2
+linux-libc-dev
+pi-bluetooth
+python-gpiozero
+python-spidev
+python3-gpiozero
+python3-spidev
+raspberrypi-bootloader
+raspberrypi-kernel
+raspberrypi-sys-mods
+rpi-eeprom
+rpi-update
+2021-05-07 16:00:44,708 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper status -u no) successfully finished
+2021-05-07 16:00:44,721 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper config --get branch.master.remote) successfully finished
+2021-05-07 16:00:44,736 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper branch --list) successfully finished
+2021-05-07 16:00:50,831 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper fetch origin --prune --progress) successfully finished
+2021-05-07 16:00:50,855 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper remote get-url origin) successfully finished
+2021-05-07 16:00:50,869 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse HEAD) successfully finished
+2021-05-07 16:00:50,883 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse origin/master) successfully finished
