@@ -1,1 +1,1 @@
-curl "https://maker.ifttt.com/trigger/lighton/with/key/brUUFlECx3KHUOIwl5imf"
+/home/pi/hs100/hs100 192.168.2.178 on
