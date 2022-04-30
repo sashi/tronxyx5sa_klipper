@@ -3758,3 +3758,1505 @@ LED off
 Send MSG = Started printing Case-TronXY X5SA-PLA.gcode
 Websocket:
 [Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 2.7%. Current Time 00:24:06. Remaining Time 14:39:50
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 6.4%. Current Time 00:47:24. Remaining Time 11:28:18
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 9.0%. Current Time 01:10:39. Remaining Time 11:54:41
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 11.4%. Current Time 01:33:55. Remaining Time 12:08:48
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 27.3%. Current Time 01:57:45. Remaining Time 05:13:00
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 43.7%. Current Time 02:21:24. Remaining Time 03:02:17
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 60.3%. Current Time 02:45:03. Remaining Time 01:48:33
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 80.9%. Current Time 03:08:44. Remaining Time 00:44:26
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Case-TronXY X5SA-PLA.gcode at 93.6%. Current Time 03:32:17. Remaining Time 00:14:28
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing Case-TronXY X5SA-PLA.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Test-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 7.6%. Current Time 00:05:15. Remaining Time 01:03:53
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 17.0%. Current Time 00:09:54. Remaining Time 00:48:13
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 26.4%. Current Time 00:14:32. Remaining Time 00:40:32
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 35.4%. Current Time 00:19:10. Remaining Time 00:34:59
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 44.7%. Current Time 00:23:49. Remaining Time 00:29:23
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 53.8%. Current Time 00:28:25. Remaining Time 00:24:25
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 65.1%. Current Time 00:33:10. Remaining Time 00:17:44
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 76.8%. Current Time 00:37:52. Remaining Time 00:11:27
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Test-TronXY X5SA-PLA.gcode at 88.4%. Current Time 00:42:33. Remaining Time 00:05:36
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing Test-TronXY X5SA-PLA.gcode
+Mon 25 Apr 2022 11:08:45 PM PDT
+Stop moonraker-telegram
+
+
+Mon 25 Apr 2022 11:09:06 PM PDT
+Start moonraker-telegram
+Websocket:
+[Errno 111] Connection refused
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Boost-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Boost-TronXY X5SA-ABS.gcode at 6.1%. Current Time 00:13:07. Remaining Time 03:23:28
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing GDI-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 2.3%. Current Time 00:08:31. Remaining Time 06:00:01
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 5.0%. Current Time 00:16:14. Remaining Time 05:11:33
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 9.6%. Current Time 00:23:57. Remaining Time 03:44:37
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 13.0%. Current Time 00:31:44. Remaining Time 03:32:43
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 25.8%. Current Time 00:39:40. Remaining Time 01:54:05
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 41.1%. Current Time 00:47:38. Remaining Time 01:08:18
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 56.9%. Current Time 00:55:33. Remaining Time 00:42:04
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 72.5%. Current Time 01:03:28. Remaining Time 00:24:02
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing GDI-TronXY X5SA-ABS.gcode at 87.8%. Current Time 01:11:25. Remaining Time 00:09:57
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing GDI-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 4.9%. Current Time 00:06:28. Remaining Time 02:05:20
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 13.7%. Current Time 00:12:19. Remaining Time 01:17:23
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 21.6%. Current Time 00:18:11. Remaining Time 01:06:01
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 31.5%. Current Time 00:24:03. Remaining Time 00:52:14
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 43.2%. Current Time 00:29:57. Remaining Time 00:39:26
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 53.7%. Current Time 00:35:51. Remaining Time 00:30:58
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 64.2%. Current Time 00:41:44. Remaining Time 00:23:15
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 77.4%. Current Time 00:47:27. Remaining Time 00:13:49
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 89.9%. Current Time 00:53:09. Remaining Time 00:05:57
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James2-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 3.7%. Current Time 00:09:59. Remaining Time 04:17:19
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 11.3%. Current Time 00:19:28. Remaining Time 02:33:14
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 19.8%. Current Time 00:28:53. Remaining Time 01:57:11
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 26.2%. Current Time 00:38:18. Remaining Time 01:47:48
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 32.1%. Current Time 00:47:43. Remaining Time 01:40:44
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 40.7%. Current Time 00:57:17. Remaining Time 01:23:35
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 55.9%. Current Time 01:06:57. Remaining Time 00:52:48
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 72.5%. Current Time 01:16:33. Remaining Time 00:29:04
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 87.9%. Current Time 01:26:00. Remaining Time 00:11:52
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James2-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James3-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 6.2%. Current Time 00:05:38. Remaining Time 01:25:43
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 16.9%. Current Time 00:10:38. Remaining Time 00:52:18
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 29.5%. Current Time 00:15:37. Remaining Time 00:37:21
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 39.2%. Current Time 00:20:37. Remaining Time 00:32:02
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 54.0%. Current Time 00:25:37. Remaining Time 00:21:51
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 69.0%. Current Time 00:30:38. Remaining Time 00:13:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 78.7%. Current Time 00:35:30. Remaining Time 00:09:37
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 88.5%. Current Time 00:40:21. Remaining Time 00:05:16
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James3-TronXY X5SA-ABS.gcode at 95.2%. Current Time 00:45:14. Remaining Time 00:02:16
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James3-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James2-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 3.3%. Current Time 00:09:23. Remaining Time 04:31:05
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 11.7%. Current Time 00:18:19. Remaining Time 02:18:47
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 20.9%. Current Time 00:27:10. Remaining Time 01:42:39
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 26.3%. Current Time 00:36:00. Remaining Time 01:40:40
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 32.3%. Current Time 00:44:54. Remaining Time 01:34:04
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 40.7%. Current Time 00:53:55. Remaining Time 01:18:38
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 57.6%. Current Time 01:02:58. Remaining Time 00:46:19
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 73.6%. Current Time 01:11:56. Remaining Time 00:25:48
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James2-TronXY X5SA-ABS.gcode at 88.4%. Current Time 01:20:44. Remaining Time 00:10:37
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James2-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing james-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing james-TronXY X5SA-ABS.gcode at 5.6%. Current Time 00:11:09. Remaining Time 03:07:35
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing james-TronXY X5SA-ABS.gcode at 14.7%. Current Time 00:21:52. Remaining Time 02:06:38
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 8.5%. Current Time 00:15:47. Remaining Time 02:48:53
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 19.9%. Current Time 00:30:49. Remaining Time 02:04:15
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 31.1%. Current Time 00:45:50. Remaining Time 01:41:28
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 42.4%. Current Time 01:00:51. Remaining Time 01:22:43
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 53.7%. Current Time 01:15:53. Remaining Time 01:05:31
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 64.6%. Current Time 01:30:59. Remaining Time 00:49:47
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 75.2%. Current Time 01:46:09. Remaining Time 00:35:00
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 84.9%. Current Time 02:01:44. Remaining Time 00:21:38
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 92.9%. Current Time 02:17:10. Remaining Time 00:10:23
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-ABS.gcode
+Tue 26 Apr 2022 11:17:33 PM PDT
+Stop moonraker-telegram
+
+
+Tue 26 Apr 2022 11:17:51 PM PDT
+Start moonraker-telegram
+Websocket:
+[Errno 111] Connection refused
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 7.7%. Current Time 00:21:29. Remaining Time 04:17:57
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 18.2%. Current Time 00:42:18. Remaining Time 03:10:01
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 28.5%. Current Time 01:03:08. Remaining Time 02:38:45
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 37.3%. Current Time 01:23:58. Remaining Time 02:20:55
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 47.5%. Current Time 01:44:47. Remaining Time 01:55:59
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 58.1%. Current Time 02:05:36. Remaining Time 01:30:31
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 67.7%. Current Time 02:26:25. Remaining Time 01:10:00
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 77.7%. Current Time 02:47:45. Remaining Time 00:48:08
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-ABS.gcode at 88.5%. Current Time 03:09:23. Remaining Time 00:24:37
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 5.1%. Current Time 00:17:37. Remaining Time 05:30:06
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 12.6%. Current Time 00:34:51. Remaining Time 04:01:45
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 21.7%. Current Time 00:52:10. Remaining Time 03:07:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 30.0%. Current Time 01:09:36. Remaining Time 02:42:22
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 36.5%. Current Time 01:27:01. Remaining Time 02:31:20
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 43.0%. Current Time 01:44:28. Remaining Time 02:18:43
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 53.9%. Current Time 02:02:19. Remaining Time 01:44:38
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 70.4%. Current Time 02:20:26. Remaining Time 00:59:03
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 86.6%. Current Time 02:38:20. Remaining Time 00:24:28
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-PLA.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 4.3%. Current Time 00:10:36. Remaining Time 03:56:08
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 12.0%. Current Time 00:20:38. Remaining Time 02:30:41
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 20.9%. Current Time 00:30:46. Remaining Time 01:56:13
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 27.6%. Current Time 00:40:48. Remaining Time 01:47:08
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 32.3%. Current Time 00:50:38. Remaining Time 01:45:55
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 38.3%. Current Time 01:00:38. Remaining Time 01:37:41
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 50.7%. Current Time 01:10:57. Remaining Time 01:09:06
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 69.5%. Current Time 01:21:22. Remaining Time 00:35:47
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 86.8%. Current Time 01:31:14. Remaining Time 00:13:52
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-PLA.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing James-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 4.9%. Current Time 00:09:52. Remaining Time 03:11:29
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 13.1%. Current Time 00:19:14. Remaining Time 02:07:11
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 22.8%. Current Time 00:28:34. Remaining Time 01:36:48
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 27.8%. Current Time 00:37:47. Remaining Time 01:38:03
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 32.7%. Current Time 00:46:58. Remaining Time 01:36:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 39.6%. Current Time 00:56:20. Remaining Time 01:25:51
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 54.4%. Current Time 01:06:06. Remaining Time 00:55:29
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 71.7%. Current Time 01:15:45. Remaining Time 00:29:56
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing James-TronXY X5SA-PLA.gcode at 87.4%. Current Time 01:24:55. Remaining Time 00:12:14
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing James-TronXY X5SA-PLA.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing AB.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 7.4%. Current Time 00:11:02. Remaining Time 02:18:40
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 18.5%. Current Time 00:21:53. Remaining Time 01:36:10
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 29.8%. Current Time 00:32:31. Remaining Time 01:16:35
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 41.8%. Current Time 00:43:00. Remaining Time 00:59:55
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 53.2%. Current Time 00:53:27. Remaining Time 00:47:06
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 63.1%. Current Time 01:03:57. Remaining Time 00:37:18
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 73.2%. Current Time 01:14:38. Remaining Time 00:27:23
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 83.2%. Current Time 01:25:27. Remaining Time 00:17:12
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 92.7%. Current Time 01:36:08. Remaining Time 00:07:33
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing AB.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = hey, i finished the last print now i am idling
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing AB.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 7.1%. Current Time 00:02:45. Remaining Time 00:36:01
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 16.4%. Current Time 00:04:49. Remaining Time 00:24:29
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 26.3%. Current Time 00:06:54. Remaining Time 00:19:19
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 36.0%. Current Time 00:08:59. Remaining Time 00:15:59
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 45.4%. Current Time 00:11:01. Remaining Time 00:13:15
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 58.6%. Current Time 00:13:03. Remaining Time 00:09:13
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 70.9%. Current Time 00:15:09. Remaining Time 00:06:12
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 83.0%. Current Time 00:17:15. Remaining Time 00:03:32
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 93.7%. Current Time 00:19:19. Remaining Time 00:01:18
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing AB.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing AB.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing AB.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 6.2%. Current Time 00:13:37. Remaining Time 03:24:36
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 18.3%. Current Time 00:27:26. Remaining Time 02:02:25
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 29.2%. Current Time 00:41:16. Remaining Time 01:39:55
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 40.2%. Current Time 00:55:01. Remaining Time 01:21:49
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 51.9%. Current Time 01:08:54. Remaining Time 01:03:47
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 63.7%. Current Time 01:22:46. Remaining Time 00:47:15
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 74.7%. Current Time 01:36:00. Remaining Time 00:32:35
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 84.9%. Current Time 01:49:03. Remaining Time 00:19:25
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB.gcode at 93.3%. Current Time 02:02:17. Remaining Time 00:08:43
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing AB.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Overhang-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 7.4%. Current Time 00:02:24. Remaining Time 00:30:08
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 18.5%. Current Time 00:04:15. Remaining Time 00:18:41
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 29.8%. Current Time 00:06:06. Remaining Time 00:14:24
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 40.3%. Current Time 00:07:56. Remaining Time 00:11:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 51.3%. Current Time 00:09:46. Remaining Time 00:09:17
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Overhang-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 20.0%. Current Time 00:04:34. Remaining Time 00:18:16
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 35.9%. Current Time 00:08:33. Remaining Time 00:15:16
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 40.7%. Current Time 00:12:09. Remaining Time 00:17:44
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 46.7%. Current Time 00:15:48. Remaining Time 00:18:00
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 52.7%. Current Time 00:19:27. Remaining Time 00:17:26
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 58.9%. Current Time 00:23:08. Remaining Time 00:16:07
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 66.5%. Current Time 00:26:50. Remaining Time 00:13:29
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 76.9%. Current Time 00:30:36. Remaining Time 00:09:12
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Overhang-TronXY X5SA-PLA.gcode at 88.9%. Current Time 00:34:24. Remaining Time 00:04:16
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing Overhang-TronXY X5SA-PLA.gcode
+Fri 29 Apr 2022 12:10:26 AM PDT
+Stop moonraker-telegram
+
+
+Fri 29 Apr 2022 12:10:44 AM PDT
+Start moonraker-telegram
+Websocket:
+[Errno 111] Connection refused
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing AB-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 7.3%. Current Time 00:20:35. Remaining Time 04:22:55
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 17.5%. Current Time 00:41:21. Remaining Time 03:14:29
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 28.5%. Current Time 01:02:02. Remaining Time 02:35:18
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 40.0%. Current Time 01:22:52. Remaining Time 02:04:14
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 51.0%. Current Time 01:43:25. Remaining Time 01:39:20
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 60.8%. Current Time 02:03:28. Remaining Time 01:19:43
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 70.5%. Current Time 02:23:13. Remaining Time 01:00:04
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 81.1%. Current Time 02:43:01. Remaining Time 00:38:05
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing AB-ABS.gcode at 90.5%. Current Time 03:02:58. Remaining Time 00:19:17
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing AB-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing SB-ABS.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 6.1%. Current Time 00:16:16. Remaining Time 04:11:17
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 15.0%. Current Time 00:32:32. Remaining Time 03:03:58
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 25.2%. Current Time 00:48:53. Remaining Time 02:24:54
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 35.9%. Current Time 01:05:18. Remaining Time 01:56:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 46.0%. Current Time 01:21:43. Remaining Time 01:35:49
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 57.9%. Current Time 01:38:21. Remaining Time 01:11:38
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 68.7%. Current Time 01:54:44. Remaining Time 00:52:14
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 79.5%. Current Time 02:11:21. Remaining Time 00:33:46
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing SB-ABS.gcode at 90.5%. Current Time 02:28:07. Remaining Time 00:15:28
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing SB-ABS.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Arm-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 7.0%. Current Time 00:11:08. Remaining Time 02:27:34
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 17.4%. Current Time 00:21:55. Remaining Time 01:43:47
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 28.5%. Current Time 00:32:56. Remaining Time 01:22:39
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 39.5%. Current Time 00:43:57. Remaining Time 01:07:23
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 50.4%. Current Time 00:54:58. Remaining Time 00:54:00
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 61.4%. Current Time 01:05:59. Remaining Time 00:41:25
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 72.4%. Current Time 01:16:59. Remaining Time 00:29:19
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 83.5%. Current Time 01:28:00. Remaining Time 00:17:24
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 92.5%. Current Time 01:38:45. Remaining Time 00:08:00
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing Arm-TronXY X5SA-PLA.gcode
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Started printing Arm-TronXY X5SA-PLA.gcode
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 6.8%. Current Time 00:07:20. Remaining Time 01:41:19
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 15.9%. Current Time 00:14:05. Remaining Time 01:14:15
+Websocket:
+[Errno 32] Broken pipe
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 26.8%. Current Time 00:21:00. Remaining Time 00:57:30
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 38.7%. Current Time 00:28:03. Remaining Time 00:44:19
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 50.7%. Current Time 00:35:06. Remaining Time 00:34:05
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 62.6%. Current Time 00:42:09. Remaining Time 00:25:13
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 74.7%. Current Time 00:49:12. Remaining Time 00:16:41
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 84.0%. Current Time 00:56:06. Remaining Time 00:10:42
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+Send MSG = Printing Arm-TronXY X5SA-PLA.gcode at 93.2%. Current Time 01:02:50. Remaining Time 00:04:35
+telegram.sh
+Led on
+Webcam0 link is working
+Jpeg0 file is okay
+LED off
+Send MSG = Finished printing Arm-TronXY X5SA-PLA.gcode
+Sat 30 Apr 2022 12:23:23 AM PDT
+Stop moonraker-telegram
+
+
+Sat 30 Apr 2022 12:23:43 AM PDT
+Start moonraker-telegram
+Websocket:
+[Errno 111] Connection refused
