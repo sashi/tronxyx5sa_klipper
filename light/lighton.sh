@@ -1,1 +1,1 @@
-/home/pi/hs100/hs100 192.168.1.180 on
+curl "http://192.168.4.15/cm?cmnd=Power%20On"
