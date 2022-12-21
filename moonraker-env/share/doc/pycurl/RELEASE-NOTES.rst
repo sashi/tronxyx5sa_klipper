@@ -1,6 +1,18 @@
 Release Notes
 =============
 
+PycURL 7.45.1 - 2022-03-13
+--------------------------
+
+This release fixes build when libcurl < 7.64.1 is used.
+
+PycURL 7.45.0 - 2022-03-09
+--------------------------
+
+This release adds support for SecureTransport SSL backend (MacOS), adds
+ability to unset a number of multi options, adds ability to duplicate easy
+handles and permits pycurl classes to be subclassed.
+
 PycURL 7.44.1 - 2021-08-15
 --------------------------
 
